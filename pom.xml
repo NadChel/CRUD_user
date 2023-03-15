@@ -11,7 +11,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -33,17 +33,23 @@
             <version>8.0.32</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate.javax.persistence</groupId>-->
-<!--            <artifactId>hibernate-jpa-2.1-api</artifactId>-->
-<!--            <version>1.0.2.Final</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>6.1.7.Final</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.5</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate.javax.persistence</groupId>-->
+<!--            <artifactId>hibernate-jpa-2.1-api</artifactId>-->
+<!--            <version>1.0.2.Final</version>-->
+<!--        </dependency>-->
 
 <!--****************************** Оригинальные зависимости ***************************************-->
         <dependency>
@@ -53,26 +59,26 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>jakarta.servlet.jsp.jstl</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-            <version>3.0.0</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>jakarta.servlet.jsp.jstl</groupId>-->
+<!--            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>jakarta.servlet.jsp</groupId>
-            <artifactId>jakarta.servlet.jsp-api</artifactId>
-            <version>3.1.1</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>jakarta.servlet.jsp</groupId>-->
+<!--            <artifactId>jakarta.servlet.jsp-api</artifactId>-->
+<!--            <version>3.1.1</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.web</groupId>-->
+<!--            <artifactId>jakarta.servlet.jsp.jstl</artifactId>-->
+<!--            <version>3.0.1</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
 <!--****************************** Зависимости со StackOverflow ***************************************-->
 <!--        <dependency>-->
 <!--            <groupId>javax.servlet.jsp.jstl</groupId>-->
@@ -93,12 +99,27 @@
 <!--            <version>2.2</version>-->
 <!--            <scope>provided</scope>-->
 <!--        </dependency>-->
-<!--***************************************************************************************************-->
+<!--**************************************** Thymeleaf **********************************************-->
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.5</version>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring6</artifactId>
+            <version>3.1.1.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>3.1.1.RELEASE</version>
+        </dependency>
+<!--****************************** JSTL зависимость Трегулова *************************************-->
+
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>jstl</artifactId>-->
+<!--            <version>1.2</version>-->
+<!--        </dependency>-->
+
+<!--***************************************************************************************************-->
 
     </dependencies>
     <build>

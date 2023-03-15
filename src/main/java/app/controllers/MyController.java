@@ -24,7 +24,7 @@ public class MyController {
     public String showUsers(Model model) {
         userService.setShowUsersModel(model);
 //        model.addAttribute("userList", userList);
-        return "users";
+        return "thyme-users";
     }
 
     @RequestMapping("/add")
