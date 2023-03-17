@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/* 404: "The requested resource [/] is not available". Судя по всему, контроллер и его хэндлеры не находятся.
+Почему?
+Пробовал и десятый, и девятый Томкэт */
+
 @Controller
 public class MyController {
     private final UserService userService;
@@ -24,7 +28,8 @@ public class MyController {
     public String showUsers(Model model) {
         userService.setShowUsersModel(model);
 //        model.addAttribute("userList", userList);
-        return "thyme-users";
+        return "users";
+//        return "thyme-users";
     }
 
     @RequestMapping("/add")

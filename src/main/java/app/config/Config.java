@@ -37,8 +37,8 @@ public class Config {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 //        viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/views/");
-//        viewResolver.setSuffix(".jsp");
-        viewResolver.setSuffix(".html");
+        viewResolver.setSuffix(".jsp");
+//        viewResolver.setSuffix(".html");
         return viewResolver;
     }
 
@@ -61,7 +61,7 @@ public class Config {
 //        dataSource.setPassword(env.getProperty("db.password"));
 //
 //        Properties connectionProps = new Properties();
-//        !!!!! connectionProps.put("allowPublicKeyRetrieval", env.getProperty("allowPublicKeyRetrieval"));
+//        connectionProps.put("allowPublicKeyRetrieval", env.getProperty("allowPublicKeyRetrieval"));
 //        dataSource.setConnectionProperties(connectionProps);
 //        return dataSource;
 //    }
@@ -70,12 +70,16 @@ public class Config {
     public LocalSessionFactoryBean sessionFactory() throws PropertyVetoException {
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
         factoryBean.setDataSource(comboPooledDataSource());
-        factoryBean.setPackagesToScan("java");
+        factoryBean.setPackagesToScan("app");
 
         Properties props = new Properties();
-        props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
-        props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-        props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
+        for (String[] kv : new String[][]{
+                {"hibernate.show_sql", env.getProperty("hibernate.show_sql")},
+                {"hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto")},
+                {"hibernate.dialect", env.getProperty("hibernate.dialect")}
+        }) {
+            props.put(kv[0], kv[1]);
+        }
 
         factoryBean.setHibernateProperties(props);
         factoryBean.setAnnotatedClasses(User.class);

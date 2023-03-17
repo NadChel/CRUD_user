@@ -1,3 +1,5 @@
+<%--***** В основном код ниже, как и проект в целом, взят из курса Трегулова "Spring для начинающих (2020)" ********--%>
+
 <%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="t" uri="http://www.springframework.org/tags" %>
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
