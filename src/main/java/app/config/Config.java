@@ -73,13 +73,16 @@ public class Config {
         factoryBean.setPackagesToScan("app");
 
         Properties props = new Properties();
-        for (String[] kv : new String[][]{
-                {"hibernate.show_sql", env.getProperty("hibernate.show_sql")},
-                {"hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto")},
-                {"hibernate.dialect", env.getProperty("hibernate.dialect")}
-        }) {
-            props.put(kv[0], kv[1]);
-        }
+        props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+        props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
+//        for (String[] kv : new String[][]{
+//                {"hibernate.show_sql", env.getProperty("hibernate.show_sql")},
+//                {"hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto")},
+//                {"hibernate.dialect", env.getProperty("hibernate.dialect")}
+//        }) {
+//            props.put(kv[0], kv[1]);
+//        }
 
         factoryBean.setHibernateProperties(props);
         factoryBean.setAnnotatedClasses(User.class);

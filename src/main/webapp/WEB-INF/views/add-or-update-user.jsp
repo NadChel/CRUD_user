@@ -10,11 +10,11 @@
     <form:hidden path="id"/>
     Name: <form:input path="name"/>
     <br>
-    Name: <form:input path="lastName"/>
+    Last name: <form:input path="lastName"/>
     <br>
-    Name: <form:input path="age"/>
+    Age: <form:input path="age"/>
     <br>
-    Name: <form:input path="email"/>
+    Email: <form:input path="email"/>
     <input type="submit" value="Submit">
 </form:form>
 </body>

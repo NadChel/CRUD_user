@@ -24,7 +24,7 @@ public class MyController {
         this.userService = userService;
     }
 
-    @RequestMapping("/")
+    @RequestMapping
     public String showUsers(Model model) {
         userService.setShowUsersModel(model);
 //        model.addAttribute("userList", userList);
@@ -40,6 +40,7 @@ public class MyController {
 
     @RequestMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
+        System.out.println("user in the saveUser handler: " + user);
         userService.addUser(user);
         return "redirect:/";
     }

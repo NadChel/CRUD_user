@@ -1,9 +1,9 @@
 package app.dao;
 
-import jakarta.persistence.EntityManagerFactory;
 import app.models.User;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManagerFactory;
 import java.util.List;
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -20,7 +20,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void addUser(User user) {
-        entityManagerFactory.createEntityManager().merge(user);
+        User returnedUser = entityManagerFactory.createEntityManager().merge(user);
+        System.out.println("returnedUser in addUser method: " + returnedUser);
     }
 
     @Override

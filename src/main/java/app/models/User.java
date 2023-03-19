@@ -1,6 +1,8 @@
 package app.models;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
+import java.util.StringJoiner;
 
 @Entity
 @Table(name = "users")
@@ -66,5 +68,16 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("name='" + name + "'")
+                .add("lastName='" + lastName + "'")
+                .add("age=" + age)
+                .add("email='" + email + "'")
+                .toString();
     }
 }
