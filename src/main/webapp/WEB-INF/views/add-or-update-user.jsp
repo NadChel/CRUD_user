@@ -9,12 +9,13 @@
 <form:form action="saveUser" modelAttribute="user">
     <form:hidden path="id"/>
     Name: <form:input path="name"/>
-    <br>
+    <br><br>
     Last name: <form:input path="lastName"/>
-    <br>
+    <br><br>
     Age: <form:input path="age"/>
-    <br>
+    <br><br>
     Email: <form:input path="email"/>
+    <br><br>
     <input type="submit" value="Submit">
 </form:form>
 </body>

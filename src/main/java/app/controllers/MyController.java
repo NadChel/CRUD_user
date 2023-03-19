@@ -40,7 +40,6 @@ public class MyController {
 
     @RequestMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
-        System.out.println("user in the saveUser handler: " + user);
         userService.addUser(user);
         return "redirect:/";
     }

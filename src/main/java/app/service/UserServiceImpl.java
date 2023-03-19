@@ -3,11 +3,10 @@ package app.service;
 import app.dao.UserDao;
 import app.models.User;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 
 @Service
-@Transactional(readOnly = true)
+//@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
 
@@ -26,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void addUser(User user) {
         userDao.addUser(user);
     }
@@ -37,7 +36,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void deleteUserById(long id) {
         userDao.deleteUserById(id);
     }
