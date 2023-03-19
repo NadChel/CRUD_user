@@ -1,12 +1,11 @@
-<%--***** В основном код ниже, как и проект в целом, взят из курса Трегулова "Spring для начинающих (2020)" ********--%>
-
 <%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<%@ taglib prefix="t" uri="http://www.springframework.org/tags" %>--%>
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<%--<%@ taglib prefix="j" uri="http://java.sun.com/jstl/core" %>--%>
-<%--<%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<%--<!DOCTYPE html>--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Users Database</title>
+    <link href='./users-style-sheet.css' rel='stylesheet'>
+</head>
 <body>
 <h2>Users:</h2>
 <table>

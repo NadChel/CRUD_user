@@ -2,6 +2,10 @@
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <!DOCTYPE html>
 <html>
+<head>
+    <title>User Info</title>
+    <link href='users-style-sheet.css' rel='stylesheet'>
+</head>
 <body>
 <h2>Fill in the forms</h2>
 <br>
