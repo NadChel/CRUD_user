@@ -9,8 +9,9 @@
     <link href='/stylesheets/users-style-sheet.css' rel='stylesheet'>
 </head>
 <body>
-<div class="table">
+<div class="table-and-heading">
 <h2>Users:</h2>
+    <div class="table">
 <table>
     <thead>
     <tr>
@@ -45,6 +46,7 @@
 </table>
     <br>
     <input class='main-button' type="button" value="Add" onclick="window.location.href = '/add'"/>
+    </div>
 </div>
 </body>
 </html>

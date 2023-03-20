@@ -9,20 +9,25 @@
     <link href="/stylesheets/users-style-sheet.css" rel="stylesheet">
 </head>
 <body>
+<div class="forms-and-heading">
 <h2>Fill in the forms</h2>
-<br>
 <%--@elvariable id="user" type="app.models.User"--%>
-<form:form action="saveUser" modelAttribute="user">
+<form:form class="forms" action="saveUser" modelAttribute="user">
     <form:hidden path="id"/>
-    Name: <form:input path="name"/>
+    <form:label path="name">Name: </form:label>
+    <form:input path="name"/>
     <br><br>
-    Last name: <form:input path="lastName"/>
+    <form:label path="lastName">Last name: </form:label>
+    <form:input path="lastName"/>
     <br><br>
-    Age: <form:input path="age"/>
+    <form:label path="age">Age: </form:label>
+    <form:input path="age"/>
     <br><br>
-    Email: <form:input path="email"/>
+    <form:label path="email">Email: </form:label>
+    <form:input path="email"/>
     <br><br>
     <input class='main-button' type="submit" value="Submit">
 </form:form>
+</div>
 </body>
 </html>
