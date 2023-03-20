@@ -4,7 +4,9 @@
 <html>
 <head>
     <title>User Info</title>
-    <link href='users-style-sheet.css' rel='stylesheet'>
+    <link rel="icon" href="/favicons/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="/stylesheets/users-style-sheet.css" rel="stylesheet">
 </head>
 <body>
 <h2>Fill in the forms</h2>
@@ -20,7 +22,7 @@
     <br><br>
     Email: <form:input path="email"/>
     <br><br>
-    <input type="submit" value="Submit">
+    <input class='main-button' type="submit" value="Submit">
 </form:form>
 </body>
 </html>

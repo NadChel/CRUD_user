@@ -14,6 +14,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import java.beans.PropertyVetoException;
@@ -24,7 +26,7 @@ import java.util.Properties;
 @PropertySource("classpath:db.properties")
 @EnableWebMvc
 @EnableTransactionManagement
-public class Config {
+public class Config implements WebMvcConfigurer {
 
     private final Environment env;
 
@@ -38,6 +40,16 @@ public class Config {
         viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        WebMvcConfigurer.super.addResourceHandlers(registry);
+        registry.addResourceHandler("/stylesheets/**")
+                .addResourceLocations("/WEB-INF/stylesheets/");
+        registry.addResourceHandler("/favicons/**")
+                .addResourceLocations("/WEB-INF/favicons/");
+
     }
 
     @Bean(destroyMethod = "close")

@@ -4,9 +4,12 @@
 <html>
 <head>
     <title>Users Database</title>
-    <link href='./users-style-sheet.css' rel='stylesheet'>
+    <link rel="icon" href="/favicons/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href='/stylesheets/users-style-sheet.css' rel='stylesheet'>
 </head>
 <body>
+<div class="table">
 <h2>Users:</h2>
 <table>
     <thead>
@@ -34,12 +37,14 @@
             <td>${user.email}</td>
             <td>
                 <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
-                <input type="button" value="Delete" onclick="window.location.href='${deleteButton}'"/>
+                <input class='delete-button' type="button" value="Delete" onclick="window.location.href='${deleteButton}'"/>
             </td>
         </tr>
     </j:forEach>
     </tbody>
 </table>
-<input type="button" value="Add" onclick="window.location.href = '/add'"/>
+    <br>
+    <input class='main-button' type="button" value="Add" onclick="window.location.href = '/add'"/>
+</div>
 </body>
 </html>
