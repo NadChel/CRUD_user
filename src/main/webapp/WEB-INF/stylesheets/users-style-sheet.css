@@ -22,14 +22,19 @@ h2 {
 
 table {
     border: 3px solid black;
+    border-collapse: collapse;
 }
 
 thead {
     background-color: slategray;
 }
 
-td {
+tr {
     border-top: 1px solid black;
+}
+
+th {
+    border: 2px solid white;
 }
 
 .main-button {
