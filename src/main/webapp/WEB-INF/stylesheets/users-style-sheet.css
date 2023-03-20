@@ -8,11 +8,8 @@
 }
 
 .table, .forms {
-    /*text-align: center;*/
     height: auto;
     width: max-content;
-    /*height: 70%;*/
-    /*width: 70%;*/
     margin: 2% auto;
     /*border: 4px dotted gray;*/
 }
@@ -25,7 +22,6 @@ h2 {
 
 table {
     border: 3px solid black;
-    /*width: 100%;*/
 }
 
 thead {
