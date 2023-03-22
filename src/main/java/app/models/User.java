@@ -1,15 +1,12 @@
 package app.models;
 
 
-import org.hibernate.annotations.Proxy;
-
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 @Entity
-@Proxy(lazy = false) // ←-- это какая-то странная фигня, ухудшающая перформанс,
-@Table(name = "users") // но без неё вылетает org.hibernate.LazyInitializationException 🤷‍♂️
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

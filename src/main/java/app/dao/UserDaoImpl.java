@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUserById(long id) {
-        return entityManager.getReference(User.class, id);
+        return entityManager.find(User.class, id);
     }
 
     @Override
